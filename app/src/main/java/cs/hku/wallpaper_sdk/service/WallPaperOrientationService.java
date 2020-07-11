@@ -52,12 +52,13 @@ public class WallPaperOrientationService {
 
     public static void StartOrientationListener(Activity activity) {
         wallpaperManager = WallpaperManager.getInstance(activity);
-        sm = (SensorManager) activity.getSystemService(Context.SENSOR_SERVICE);
-        assert sm != null;
-        aSensor = sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        mSensor = sm.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
-        sm.registerListener(myListener, aSensor, SensorManager.SENSOR_DELAY_NORMAL);
-        sm.registerListener(myListener, mSensor, SensorManager.SENSOR_DELAY_NORMAL);
+
+//        sm = (SensorManager) activity.getSystemService(Context.SENSOR_SERVICE);
+//        assert sm != null;
+//        aSensor = sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+//        mSensor = sm.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
+//        sm.registerListener(myListener, aSensor, SensorManager.SENSOR_DELAY_NORMAL);
+//        sm.registerListener(myListener, mSensor, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     private static double calCosine(Direction d1, Direction d2){
@@ -70,16 +71,14 @@ public class WallPaperOrientationService {
         float[] values = new float[3];
         float[] Res = new float[9];
         SensorManager.getRotationMatrix(Res, null, accelerometerValues, magneticFieldValues);
-        System.out.println(Arrays.toString(Res));
         SensorManager.getOrientation(Res, values);
         // 得到当前相对于世界坐标系的空间向量
         Direction direction = change(Res);
-
         // 非测试情况下这行代码注释掉
 //        Store.storeDirectionWithMatrix(direction, Res);
 
         double cosine = calCosine(oldDirection, direction);
-        if (cosine < 0.5) {
+        if (cosine < 0.9) {
             double[] d = {direction.getX(), direction.getY(), direction.getZ()};
             Image.fetchImage(d);
             oldDirection = direction;

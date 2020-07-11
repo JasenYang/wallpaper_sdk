@@ -52,7 +52,7 @@ public class HttpURLConnectionUtil {
                         conn.setDoInput(true);//设置可以获取输入流
                         InputStream in = conn.getInputStream();//获取输入流
                         // 写入文件
-                        if (download.getParentFile().exists()) {
+                        if (!download.getParentFile().exists()) {
                             download.getParentFile().mkdirs();
                         }
                         download.createNewFile();

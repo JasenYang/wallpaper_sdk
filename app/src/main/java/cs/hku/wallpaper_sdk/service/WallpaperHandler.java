@@ -30,7 +30,7 @@ public class WallpaperHandler extends Handler {
             case WallpaperConstant.ChangeWallPaper:
 
 //                InputStream stream = new ByteArrayInputStream(msg.obj.toString().getBytes(StandardCharsets.UTF_8));
-                System.out.println(msg.obj.toString());
+//                System.out.println(msg.obj.toString());
                 String url = Var.host + "/" + msg.obj.toString();
                 HttpURLConnectionUtil.setWallpaper(url);
                 break;
