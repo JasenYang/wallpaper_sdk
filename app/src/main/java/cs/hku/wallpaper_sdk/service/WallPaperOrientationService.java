@@ -53,12 +53,12 @@ public class WallPaperOrientationService {
     public static void StartOrientationListener(Activity activity) {
         wallpaperManager = WallpaperManager.getInstance(activity);
 
-//        sm = (SensorManager) activity.getSystemService(Context.SENSOR_SERVICE);
-//        assert sm != null;
-//        aSensor = sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-//        mSensor = sm.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
-//        sm.registerListener(myListener, aSensor, SensorManager.SENSOR_DELAY_NORMAL);
-//        sm.registerListener(myListener, mSensor, SensorManager.SENSOR_DELAY_NORMAL);
+        sm = (SensorManager) activity.getSystemService(Context.SENSOR_SERVICE);
+        assert sm != null;
+        aSensor = sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        mSensor = sm.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
+        sm.registerListener(myListener, aSensor, SensorManager.SENSOR_DELAY_NORMAL);
+        sm.registerListener(myListener, mSensor, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     private static double calCosine(Direction d1, Direction d2){
