@@ -35,34 +35,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.homepage);
-        /*
-        Button btn = findViewById(R.id.back_to_home);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.addCategory(Intent.CATEGORY_HOME);
-                startActivity(intent);
-            }
-        });
-        WallPaperOrientationService.StartOrientationListener(this);
-
-         */
-        //GridView是通过map格式处理数据的
-        Util.InitNetWork(this);
-
-//        img_list = get_data();
-        gridview = findViewById(R.id.grid);
+        setContentView(R.layout.homepage);
+        InitView();
         InitData();
-//        ImageAdapter imageAdapter = new ImageAdapter(this, imageUrls, names);
-//        SimpleAdapter simpleAdapter = new SimpleAdapter(this, img_list, R.layout.grid_item,
-//                new String[]{"img", "name"}, new int[]{R.id.img, R.id.img_name});
-//        gridview.setAdapter(imageAdapter);
 
     }
-
+    public void InitView(){
+        gridview = findViewById(R.id.grid);
+    }
     private void InitData(){
         ViseHttp.POST("/image/fetch")
 //                .addParam("uid", String.valueOf(Util.getUid(this)))
@@ -84,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                             imageUrls.add(resource + arr[1]);
                         }
 //                        handler.sendEmptyMessage(0);
+                        Toast.makeText(getApplicationContext(), "fetch image success, " + names +"@" + imageUrls, Toast.LENGTH_SHORT).show();
                         InitAdapter();
                         SetOnClick();
                     }

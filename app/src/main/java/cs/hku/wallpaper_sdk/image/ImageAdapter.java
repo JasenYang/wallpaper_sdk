@@ -1,16 +1,17 @@
 package cs.hku.wallpaper_sdk.image;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.annotation.GlideModule;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +27,7 @@ public class ImageAdapter extends BaseAdapter {
     private List<String> urls = new ArrayList<>();
     private List<String> names = new ArrayList<>();
 
-    public ImageAdapter(Context context, List<String> urls, List<String> names) {
+    public ImageAdapter(Context context,List<String> urls, List<String> names) {
         this.context = context;
         this.urls = urls;
         this.names = names;
@@ -51,10 +52,8 @@ public class ImageAdapter extends BaseAdapter {
         return i;
     }
 
-    @SuppressLint("InflateParams")
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        Log.d(TAG, "I am here!!!!!");
         ViewHolder vh = null;
         if(view == null){
             view = LayoutInflater.from(context).inflate(R.layout.grid_item,null);
