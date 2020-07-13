@@ -38,7 +38,7 @@ public class Mat2Angle {
 		RealMatrix p2w = new Array2DRowRealMatrix(b);
 		RealMatrix w2p = new Array2DRowRealMatrix(a);
 		
-		RealMatrix rotateMat = w2p.multiply(p2w).transpose();
+		RealMatrix rotateMat = w2p.multiply(p2w);
 		//������ת��
 		
 		
@@ -58,9 +58,12 @@ public class Mat2Angle {
 			x = Math.atan2(-temp[1][2], temp[1][1]);
 			y = Math.atan2(-temp[2][0], sy);
 			z = 0;		
-		}		
-		double[] res = {Math.toDegrees(x) + 90, Math.toDegrees(y), Math.toDegrees(z)};
-		Log.i("GGGGG", "transform: "+x + "::: " + y + ":::::" + z);
+		}
+		double x_degree = Math.toDegrees(x);
+		double y_degree = Math.toDegrees(y);
+		double z_degree = Math.toDegrees(z);
+		double[] res = {x_degree - 90, z_degree, y_degree};
+		Log.i("GGGGG", "transform: "+x_degree + "::: " + y_degree + ":::::" + z_degree);
 		return res;
 	}
 }
