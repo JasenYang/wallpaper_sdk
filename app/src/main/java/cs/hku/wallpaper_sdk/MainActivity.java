@@ -36,7 +36,10 @@ public class MainActivity extends AppCompatActivity {
 //                startActivity(intent);
 
 
-                File file = new File(Environment.getExternalStorageDirectory(), "Pikachu.stl");
+//                File file = new File(Environment.getExternalStorageDirectory(), "Pikachu.stl");
+                File file = new File(Environment.getExternalStorageDirectory(), "castle.stl");
+//                File file = new File(Environment.getExternalStorageDirectory(), "bird.stl");
+
                 loadModel(file);
 
 //                Intent intent = new Intent(Intent.ACTION_MAIN);

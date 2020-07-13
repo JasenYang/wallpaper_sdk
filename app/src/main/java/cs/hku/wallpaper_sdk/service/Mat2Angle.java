@@ -6,6 +6,8 @@ import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 import org.apache.commons.math3.linear.LUDecomposition;
 import org.apache.commons.math3.linear.RealMatrix;
 
+import java.util.Arrays;
+
 public class Mat2Angle {
 //	public static void main(String[] args) {
 //		double[] mat = {0.8660252, -0.0, 0.5000003,0.5000003, 0.0, -0.8660252,0.0, 1.0, 0.0};
@@ -20,7 +22,8 @@ public class Mat2Angle {
 	}
 	
 	public static double[] transform(double[] mat) {
-				
+
+		Log.i("GGGGG", "transform: "+ Arrays.toString(mat));
 		double b[][] = new double[3][3];
 		int index = 0;
 		for(int i = 0; i < 3; i++) {
@@ -56,8 +59,8 @@ public class Mat2Angle {
 			y = Math.atan2(-temp[2][0], sy);
 			z = 0;		
 		}		
-		double[] res = {Math.toDegrees(x), Math.toDegrees(y), Math.toDegrees(z)};
-		Log.i("KKKKKKKKKK", "transform: "+res[0] + " " + res[1] + " " + res[2]);
+		double[] res = {Math.toDegrees(x) + 90, Math.toDegrees(y), Math.toDegrees(z)};
+		Log.i("GGGGG", "transform: "+x + "::: " + y + ":::::" + z);
 		return res;
 	}
 }
