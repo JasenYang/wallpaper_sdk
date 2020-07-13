@@ -5,9 +5,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/shape_fragment_content_bg">
 
-        <view class="cs.hku.wallpaper_sdk.stl_opengl.GLWallpaperService$GLEngine$STLView"
-            android:id="@+id/stlView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
+    <view class="cs.hku.wallpaper_sdk.stl_opengl.GLWallpaperService$GLEngine$STLView"
+        android:id="@+id/stlView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </FrameLayout>

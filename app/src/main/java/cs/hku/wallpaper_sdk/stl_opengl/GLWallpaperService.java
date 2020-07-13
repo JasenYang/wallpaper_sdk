@@ -20,6 +20,7 @@ import androidx.fragment.app.Fragment;
 
 import java.io.File;
 
+import cs.hku.wallpaper_sdk.constant.Var;
 import cs.hku.wallpaper_sdk.stl_opengl.stl.STLObject;
 import cs.hku.wallpaper_sdk.stl_opengl.stl.STLRenderer;
 import cs.hku.wallpaper_sdk.stl_opengl.stl.StlFetchCallback;
@@ -29,20 +30,13 @@ import cs.hku.wallpaper_sdk.stl_opengl.stl.StlRenderPresenter;
 
 
 public class GLWallpaperService extends WallpaperService {
-    private STLObject stlObject;
+    public static GLEngine.STLView glSurfaceView;
     @Override
     public Engine onCreateEngine() {
         return new GLEngine();
     }
 
-    @Override
-    public int onStartCommand(Intent intent, int flags, int startId) {
-        stlObject = (STLObject) intent.getSerializableExtra("stlObject");
-        return super.onStartCommand(intent, flags, startId);
-    }
-
     public class GLEngine extends Engine {
-         private STLView glSurfaceView;
          private StlRenderPresenter presenter;
          private boolean renderSet;
         @Override
@@ -52,7 +46,6 @@ public class GLWallpaperService extends WallpaperService {
 
 //            File file = new File(Environment.getExternalStorageDirectory(), "Pikachu.stl");
 //            loadModel(file);
-            glSurfaceView.getStlRenderer().requestRedraw(stlObject);
             //检查是否支持 opengl es 2.0
             ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
             ConfigurationInfo configurationInfo = activityManager.getDeviceConfigurationInfo();
@@ -76,6 +69,13 @@ public class GLWallpaperService extends WallpaperService {
                         Toast.LENGTH_LONG).show();
                 return;
             }
+            if (Var.stlObject == null ) {
+                Toast.makeText(GLWallpaperService.this,
+                        "模型加载失败",
+                        Toast.LENGTH_LONG).show();
+                return;
+            }
+            glSurfaceView.getStlRenderer().requestRedraw(Var.stlObject);
         }
 
         @Override
@@ -94,37 +94,6 @@ public class GLWallpaperService extends WallpaperService {
         public void onDestroy() {
             super.onDestroy();
         }
-
-         public void loadModel(File stlFile) {
-             if (stlFile !=null && stlFile.exists()) {
-                 StlFetcher.fetchStlFile(stlFile, new StlFetchCallback() {
-                     @Override
-                     public void onBefore() {
-                         Toast.makeText(GLWallpaperService.this,
-                                 "start to load model",
-                                 Toast.LENGTH_LONG).show();
-                     }
-
-                     @Override
-                     public void onProgress(int progress) {
-                     }
-
-                     @Override
-                     public void onFinish(STLObject stlObject) {
-                         glSurfaceView.getStlRenderer().requestRedraw(stlObject);
-                         Toast.makeText(GLWallpaperService.this,
-                                 "finish loading model",
-                                 Toast.LENGTH_LONG).show();
-                     }
-
-                     @Override
-                     public void onError() {
-                     }
-                 });
-             }else{
-                 Log.i("load model", "loadModel: load model fail");
-             }
-         }
 
          public class STLView extends GLSurfaceView {
 
@@ -163,6 +132,14 @@ public class GLWallpaperService extends WallpaperService {
                  return getSurfaceHolder();
              }
 
+             public void renderModel (float rotateX, float rotateY, float rotateZ) {
+                 // change view point
+                 stlRenderer.angleX = rotateX;
+                 stlRenderer.angleY = rotateY;
+                 stlRenderer.angleZ = rotateZ;
+                 stlRenderer.requestRedraw();
+                 requestRender();
+             }
              @Override
              public boolean onTouchEvent(MotionEvent event) {
                  switch (event.getAction() & MotionEvent.ACTION_MASK) {

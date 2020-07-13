@@ -16,6 +16,7 @@ import java.util.Arrays;
 import cs.hku.wallpaper_sdk.R;
 import cs.hku.wallpaper_sdk.model.Direction;
 import cs.hku.wallpaper_sdk.model.Store;
+import cs.hku.wallpaper_sdk.stl_opengl.GLWallpaperService;
 
 public class WallPaperOrientationService {
     private static int current = -1;
@@ -68,6 +69,9 @@ public class WallPaperOrientationService {
         return d1_dot_d2 / (len_d1 * len_d2);
     }
     private static void calculateOrientation() throws IOException {
+        if (GLWallpaperService.glSurfaceView == null ){
+            return;
+        }
         float[] values = new float[3];
         float[] Res = new float[9];
         SensorManager.getRotationMatrix(Res, null, accelerometerValues, magneticFieldValues);
@@ -78,9 +82,13 @@ public class WallPaperOrientationService {
 //        Store.storeDirectionWithMatrix(direction, Res);
 
         double cosine = calCosine(oldDirection, direction);
-        if (cosine < 0.9) {
-            double[] d = {direction.getX(), direction.getY(), direction.getZ()};
-            Image.fetchImage(d);
+        if (cosine < 0.995) {
+//            double[] d = {direction.getX(), direction.getY(), direction.getZ()};
+//            Image.fetchImage(d);
+
+            double[] r = Mat2Angle.transform(Mat2Angle.toDouble(Res));
+            GLWallpaperService.glSurfaceView.renderModel((float) r[0], (float) r[1], (float) r[2]);
+//            GLWallpaperService.glSurfaceView.renderModel((float) Math.toDegrees(values[1]), (float) Math.toDegrees(values[2]), (float) Math.toDegrees(values[0]));
             oldDirection = direction;
         }
     }
