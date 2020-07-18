@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -73,7 +74,7 @@ public class Login extends AppCompatActivity {
                                 editor.putInt("wallpaper_uid", uid);
                                 editor.apply();
                                 editor.commit();
-                                Intent intent = new Intent(Login.this, MainActivity.class);
+                                Intent intent = new Intent(Login.this, HomepageActivity.class);
                                 startActivity(intent);
                             }
 

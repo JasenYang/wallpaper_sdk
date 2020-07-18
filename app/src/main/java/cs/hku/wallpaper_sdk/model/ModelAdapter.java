@@ -14,7 +14,9 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 import java.util.List;
 
+import cs.hku.wallpaper_sdk.HomepageActivity;
 import cs.hku.wallpaper_sdk.R;
+import cs.hku.wallpaper_sdk.constant.Var;
 import cs.hku.wallpaper_sdk.stl_opengl.GLWallpaperService;
 import cs.hku.wallpaper_sdk.stl_opengl.STL_View;
 import cs.hku.wallpaper_sdk.stl_opengl.stl.STLObject;
@@ -55,7 +57,6 @@ public class ModelAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        Log.i("test","???");
         ModelAdapter.ViewHolder vh = null;
         if(view == null){
             view = LayoutInflater.from(context).inflate(R.layout.grid_item,null);
@@ -68,11 +69,10 @@ public class ModelAdapter extends BaseAdapter {
         }
 
         if(objects.size()>0){
-            Log.d(TAG, "getView: " + names.get(i));
+            Log.d(TAG, "getView: " + objects.get(i));
 //            Glide.with(context).load(urls.get(i)).centerCrop().into(vh.imageView);
             //Glide.with(context).load(objects.get(i)).into(vh.modelView);
-            STLRenderer stlRenderer = new STLRenderer();
-            stlRenderer.requestRedraw(objects.get(i));
+            vh.modelView.getStlRenderer().requestRedraw(objects.get(i));
             vh.textView.setText(names.get(i));
         }
         return view;

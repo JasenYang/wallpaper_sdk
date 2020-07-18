@@ -50,15 +50,18 @@ public class HomepageActivity extends AppCompatActivity {
 
         //展示【模型】
 
-
         File file = new File(Environment.getExternalStorageDirectory(), "pikachu.stl");
-        names.add("pikachu");
+        names.add("pikapika");
+        names.add("pikapika");
+        names.add("pikapika");
+        names.add("pikapika");
 
         loadModel(file);
         Log.i("test","--------");
 
         ModelAdapter modelAdapter = new ModelAdapter(this, objects, names);
         gridview.setAdapter(modelAdapter);
+
 
     }
 
@@ -137,6 +140,9 @@ public class HomepageActivity extends AppCompatActivity {
 //                    StlRenderFragment fragment = (StlRenderFragment) view;
 //                    view.showModel(stlObject);
                     objects.add(stlObject);
+                    objects.add(stlObject);
+                    objects.add(stlObject);
+                    objects.add(stlObject);
                 }
 
                 @Override
@@ -145,7 +151,7 @@ public class HomepageActivity extends AppCompatActivity {
 //                    view.showToastMsg("文件解析失败");
                 }
             });
-
+            Log.i("test","***********");
         }else{
 //            view.showToastMsg("未找到模型文件");
         }
