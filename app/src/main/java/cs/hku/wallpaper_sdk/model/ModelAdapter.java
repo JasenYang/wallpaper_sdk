@@ -1,12 +1,17 @@
 package cs.hku.wallpaper_sdk.model;
 
+import android.app.WallpaperManager;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
+import android.service.wallpaper.WallpaperService;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -14,9 +19,12 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 import java.util.List;
 
+import cs.hku.wallpaper_sdk.Detail;
 import cs.hku.wallpaper_sdk.HomepageActivity;
+import cs.hku.wallpaper_sdk.MainActivity;
 import cs.hku.wallpaper_sdk.R;
 import cs.hku.wallpaper_sdk.constant.Var;
+import cs.hku.wallpaper_sdk.service.WallPaperOrientationService;
 import cs.hku.wallpaper_sdk.stl_opengl.GLWallpaperService;
 import cs.hku.wallpaper_sdk.stl_opengl.STL_View;
 import cs.hku.wallpaper_sdk.stl_opengl.stl.STLObject;
@@ -75,8 +83,10 @@ public class ModelAdapter extends BaseAdapter {
             vh.modelView.getStlRenderer().requestRedraw(objects.get(i));
             vh.textView.setText(names.get(i));
         }
+
         return view;
     }
+
 
     class ViewHolder{
         STL_View modelView;

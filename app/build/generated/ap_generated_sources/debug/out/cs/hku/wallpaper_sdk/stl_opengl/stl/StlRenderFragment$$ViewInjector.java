@@ -8,8 +8,8 @@ import butterknife.ButterKnife.Injector;
 public class StlRenderFragment$$ViewInjector<T extends cs.hku.wallpaper_sdk.stl_opengl.stl.StlRenderFragment> implements Injector<T> {
   @Override public void inject(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131165353, "field 'stlView'");
-    target.stlView = finder.castView(view, 2131165353, "field 'stlView'");
+    view = finder.findRequiredView(source, 2131165354, "field 'stlView'");
+    target.stlView = finder.castView(view, 2131165354, "field 'stlView'");
   }
 
   @Override public void reset(T target) {

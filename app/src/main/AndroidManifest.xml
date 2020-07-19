@@ -45,6 +45,7 @@
 
         <activity android:name=".stl_opengl.home.TLSModelActivity">
         </activity>
+
         <service
             android:name=".stl_opengl.GLWallpaperService"
             android:label="@string/app_name"

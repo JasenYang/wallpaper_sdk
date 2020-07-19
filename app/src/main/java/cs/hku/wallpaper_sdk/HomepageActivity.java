@@ -55,15 +55,17 @@ public class HomepageActivity extends AppCompatActivity {
         //展示【模型】
 
         File file = new File(Environment.getExternalStorageDirectory(), "pikachu.stl");
-        names.add("pikapika");
-        names.add("pikapika");
-        names.add("pikapika");
-        names.add("pikapika");
+        names.add("Pikapika");
+        loadModel(file);
+
+        file = new File(Environment.getExternalStorageDirectory(), "Eevee.stl");
+        names.add("Eevee");
         loadModel(file);
 
         Log.i("test","&*size: " + objects.size());
         ModelAdapter modelAdapter = new ModelAdapter(this, objects, names);
         gridview.setAdapter(modelAdapter);
+        SetOnClick();
 
     }
 
@@ -93,8 +95,6 @@ public class HomepageActivity extends AppCompatActivity {
                         }
 //                        handler.sendEmptyMessage(0);
                         Toast.makeText(getApplicationContext(), "fetch image success, " + names +"@" + imageUrls, Toast.LENGTH_SHORT).show();
-                        InitAdapter();
-                        SetOnClick();
                     }
 
                     @Override
@@ -104,10 +104,6 @@ public class HomepageActivity extends AppCompatActivity {
                 });
     }
 
-    public void InitAdapter(){
-        ImageAdapter imageAdapter = new ImageAdapter(this, imageUrls, names);
-        gridview.setAdapter(imageAdapter);
-    }
 
     public void SetOnClick(){
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -115,12 +111,27 @@ public class HomepageActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 //                Toast.makeText(getApplicationContext(), " " + img_list.get(position).get("name"), Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(getBaseContext(), Detail.class);
-                intent.putExtra("index", position);
-                startActivity(intent);
+                Var.stlObject = objects.get(position);
+                Intent intent = new Intent(
+                        WallpaperManager.ACTION_CHANGE_LIVE_WALLPAPER);
+                intent.putExtra(WallpaperManager.EXTRA_LIVE_WALLPAPER_COMPONENT,
+                        new ComponentName(HomepageActivity.this, GLWallpaperService.class));
+                WallPaperOrientationService.StartOrientationListener(HomepageActivity.this);
+                startActivityForResult(intent, Var.FromSetWallPaper);
             }
 
         });
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Log.i("GGD", "onActivityResult: "+requestCode);
+        if (requestCode == Var.FromSetWallPaper) {
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            startActivity(intent);
+        }
     }
 
     public void loadModel(final File stlFile) {
@@ -142,11 +153,6 @@ public class HomepageActivity extends AppCompatActivity {
 //                    StlRenderFragment fragment = (StlRenderFragment) view;
 //                    view.showModel(stlObject);
                     objects.add(stlObject);
-                    objects.add(stlObject);
-                    objects.add(stlObject);
-                    objects.add(stlObject);
-                    Log.i("test","Size: "+objects.size());
-
                 }
 
                 @Override

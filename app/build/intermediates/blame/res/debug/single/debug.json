@@ -8,12 +8,12 @@
         "source": "E:\\Files\\Project\\test\\wallpaper_sdk-master\\app\\src\\main\\res\\drawable-v24\\wall11.jpg"
     },
     {
-        "merged": "E:\\Files\\Project\\test\\wallpaper_sdk-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_wall03.jpg.flat",
-        "source": "E:\\Files\\Project\\test\\wallpaper_sdk-master\\app\\src\\main\\res\\drawable-v24\\wall03.jpg"
-    },
-    {
         "merged": "E:\\Files\\Project\\test\\wallpaper_sdk-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "E:\\Files\\Project\\test\\wallpaper_sdk-master\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\Files\\Project\\test\\wallpaper_sdk-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_wall03.jpg.flat",
+        "source": "E:\\Files\\Project\\test\\wallpaper_sdk-master\\app\\src\\main\\res\\drawable-v24\\wall03.jpg"
     },
     {
         "merged": "E:\\Files\\Project\\test\\wallpaper_sdk-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_wall07.jpg.flat",
