@@ -74,7 +74,8 @@ public class RegisterActivity extends Activity {
                                 editor.putInt("wallpaper_uid", uid);
                                 editor.apply();
                                 editor.commit();
-                                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                                Toast.makeText(getApplicationContext(), "Register success" , Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(RegisterActivity.this, Login.class);
                                 startActivity(intent);
                             }
 

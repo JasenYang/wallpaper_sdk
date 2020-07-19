@@ -65,6 +65,7 @@
             />
 
         <Button
+            android:id="@+id/set_wallpaper"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/img"
