@@ -4,17 +4,17 @@
     android:layout_height="300dp"
     android:orientation="vertical"
     >
-    <view class="cs.hku.wallpaper_sdk.stl_opengl.STL_View"
+    <cs.hku.wallpaper_sdk.stl_opengl.STL_View
         android:id="@+id/stlItem"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="160dp"
+        android:layout_height="260dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="180dp"
+        android:layout_height="280dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="3dp"
         android:layout_marginRight="5dp"

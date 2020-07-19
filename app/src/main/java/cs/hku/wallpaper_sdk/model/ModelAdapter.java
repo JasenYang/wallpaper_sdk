@@ -61,7 +61,7 @@ public class ModelAdapter extends BaseAdapter {
         if(view == null){
             view = LayoutInflater.from(context).inflate(R.layout.grid_item,null);
             vh = new ModelAdapter.ViewHolder();
-            vh.modelView = (STL_View) view.findViewById(R.id.stlItem);
+            vh.modelView = (STL_View)view.findViewById(R.id.stlItem);
             vh.textView = (TextView) view.findViewById(R.id.img_name);
             view.setTag(vh);
         }else{

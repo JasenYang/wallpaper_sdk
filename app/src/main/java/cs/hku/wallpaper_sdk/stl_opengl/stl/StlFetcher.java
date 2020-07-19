@@ -26,22 +26,22 @@ public class StlFetcher {
      * @param callback
      */
     public static void fetchStlFile(final File stlFile, final StlFetchCallback callback){
-            if(callback != null){
-                handler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        callback.onBefore();
-                    }
-                });
-            }
-            //判断STL文件类型
-            if(isTextFile(stlFile)){
-                //解析ASCII格式的STL文件
-                fetchTextFile(stlFile, handler, callback);
-            }else{
-                //解析二进制格式的STL文件
-                fetchBinaryFile(stlFile, handler, callback);
-            }
+        if(callback != null){
+            handler.post(new Runnable() {
+                @Override
+                public void run() {
+                    callback.onBefore();
+                }
+            });
+        }
+        //判断STL文件类型
+        if(isTextFile(stlFile)){
+            //解析ASCII格式的STL文件
+            fetchTextFile(stlFile, handler, callback);
+        }else{
+            //解析二进制格式的STL文件
+            fetchBinaryFile(stlFile, handler, callback);
+        }
 
     }
 

@@ -27,6 +27,7 @@ import cs.hku.wallpaper_sdk.model.ImgResp;
 import cs.hku.wallpaper_sdk.model.ModelAdapter;
 import cs.hku.wallpaper_sdk.service.WallPaperOrientationService;
 import cs.hku.wallpaper_sdk.stl_opengl.GLWallpaperService;
+import cs.hku.wallpaper_sdk.stl_opengl.STL_View;
 import cs.hku.wallpaper_sdk.stl_opengl.stl.STLObject;
 import cs.hku.wallpaper_sdk.stl_opengl.stl.STLRenderer;
 import cs.hku.wallpaper_sdk.stl_opengl.stl.StlFetchCallback;
@@ -41,10 +42,13 @@ public class HomepageActivity extends AppCompatActivity {
     private ArrayList<String> names = new ArrayList<>();
     private String resource = Var.host + "public/";
     private GridView gridview;
+    private STL_View stlview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage);
+
+        //stlview = (STL_View) findViewById(R.id.stlItem);
         InitView();
         //InitData();
 
@@ -55,13 +59,11 @@ public class HomepageActivity extends AppCompatActivity {
         names.add("pikapika");
         names.add("pikapika");
         names.add("pikapika");
-
         loadModel(file);
-        Log.i("test","--------");
 
+        Log.i("test","&*size: " + objects.size());
         ModelAdapter modelAdapter = new ModelAdapter(this, objects, names);
         gridview.setAdapter(modelAdapter);
-
 
     }
 
@@ -143,15 +145,18 @@ public class HomepageActivity extends AppCompatActivity {
                     objects.add(stlObject);
                     objects.add(stlObject);
                     objects.add(stlObject);
+                    Log.i("test","Size: "+objects.size());
+
                 }
 
                 @Override
                 public void onError() {
 //                    view.hideFetchProgressDialog();
 //                    view.showToastMsg("文件解析失败");
+                    Log.i("test","fail");
                 }
             });
-            Log.i("test","***********");
+
         }else{
 //            view.showToastMsg("未找到模型文件");
         }

@@ -1,4 +1,4 @@
-#Sat Jul 18 21:55:53 CST 2020
+#Sun Jul 19 15:39:13 CST 2020
 base.0=E\:\\Files\\Project\\test\\wallpaper_sdk-master\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void loadModel(final File stlFile) {
+        /*
         if (stlFile !=null && stlFile.exists()) {
             Log.i("test","???");
             StlFetcher.fetchStlFile(stlFile, new StlFetchCallback() {
@@ -91,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
         }else{
 //            view.showToastMsg("未找到模型文件");
         }
+
+         */
     }
 
     @Override
