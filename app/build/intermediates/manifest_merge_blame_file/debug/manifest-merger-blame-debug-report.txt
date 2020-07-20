@@ -6,129 +6,129 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-8-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml
+8-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml
+9-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml
 10
 11    <uses-feature android:name="android.software.live_wallpaper" />
-11-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:5:5-68
-11-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:5:19-65
+11-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:5:5-68
+11-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:5:19-65
 12    <uses-feature
-12-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:6:5-78
+12-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:6:5-78
 13        android:glEsVersion="0x00030002"
-13-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:6:19-51
+13-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:6:19-51
 14        android:required="true" />
-14-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:6:52-75
+14-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:6:52-75
 15
 16    <uses-permission android:name="android.permission.SET_WALLPAPER" />
-16-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:7:5-72
-16-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:7:22-69
+16-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:7:5-72
+16-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:7:22-69
 17    <uses-permission android:name="android.permission.INTERNET" />
-17-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:8:5-67
-17-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:8:22-64
+17-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:8:5-67
+17-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:8:22-64
 18    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-18-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:9:5-76
-18-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:9:22-73
+18-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:9:5-76
+18-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:9:22-73
 19    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-19-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:10:5-75
-19-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:10:22-72
+19-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:10:5-75
+19-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:10:22-72
 20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-20-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:11:5-79
-20-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:11:22-76
+20-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:11:5-79
+20-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:11:22-76
 21    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-21-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:12:5-80
-21-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:12:22-77
+21-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:12:5-80
+21-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:12:22-77
 22    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-22-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:13:5-81
-22-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:13:22-78
+22-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:13:5-81
+22-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:13:22-78
 23    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-23-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:14:5-78
-23-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:14:22-76
+23-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:14:5-78
+23-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:14:22-76
 24    <!-- SDCard中创建与删除文件权限 -->
 25    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-25-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:16:5-18:47
-25-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:17:9-68
+25-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:16:5-18:47
+25-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:17:9-68
 26    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-26-->[com.vise.xiaoyaoyou:viseutils:1.1.0] C:\Users\87538\.gradle\caches\transforms-2\files-2.1\55feacca2abd81af1cfa4591c38e5fb8\jetified-viseutils-1.1.0\AndroidManifest.xml:12:5-75
-26-->[com.vise.xiaoyaoyou:viseutils:1.1.0] C:\Users\87538\.gradle\caches\transforms-2\files-2.1\55feacca2abd81af1cfa4591c38e5fb8\jetified-viseutils-1.1.0\AndroidManifest.xml:12:22-72
+26-->[com.vise.xiaoyaoyou:viseutils:1.1.0] /Users/bytedance/.gradle/caches/transforms-2/files-2.1/55feacca2abd81af1cfa4591c38e5fb8/jetified-viseutils-1.1.0/AndroidManifest.xml:12:5-75
+26-->[com.vise.xiaoyaoyou:viseutils:1.1.0] /Users/bytedance/.gradle/caches/transforms-2/files-2.1/55feacca2abd81af1cfa4591c38e5fb8/jetified-viseutils-1.1.0/AndroidManifest.xml:12:22-72
 27
 28    <application
-28-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:20:5-62:19
+28-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:20:5-63:19
 29        android:allowBackup="true"
-29-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:21:9-35
+29-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:21:9-35
 30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-30-->[androidx.core:core:1.1.0] C:\Users\87538\.gradle\caches\transforms-2\files-2.1\34b4ab0d8b65ac74ddd00d45b26dd963\core-1.1.0\AndroidManifest.xml:24:18-86
+30-->[androidx.core:core:1.1.0] /Users/bytedance/.gradle/caches/transforms-2/files-2.1/34b4ab0d8b65ac74ddd00d45b26dd963/core-1.1.0/AndroidManifest.xml:24:18-86
 31        android:debuggable="true"
 32        android:extractNativeLibs="false"
 33        android:icon="@mipmap/ic_launcher"
-33-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:22:9-43
+33-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:22:9-43
 34        android:label="@string/app_name"
-34-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:23:9-41
+34-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:23:9-41
 35        android:roundIcon="@mipmap/ic_launcher_round"
-35-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:24:9-54
+35-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:24:9-54
 36        android:supportsRtl="true"
-36-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:25:9-35
+36-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:25:9-35
 37        android:testOnly="true"
 38        android:theme="@style/AppTheme"
-38-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:27:9-40
+38-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:27:9-40
 39        android:usesCleartextTraffic="true" >
-39-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:26:9-44
+39-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:26:9-44
 40        <activity android:name="cs.hku.wallpaper_sdk.MainActivity" />
-40-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:28:9-59
-40-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:28:19-47
+40-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:28:9-59
+40-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:28:19-47
 41        <activity android:name="cs.hku.wallpaper_sdk.Login" >
-41-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:30:9-60
-41-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:30:19-40
-42        </activity>
-43        <activity
-43-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:32:9-34:56
-44            android:name="cs.hku.wallpaper_sdk.RegisterActivity"
-44-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:33:13-45
-45            android:launchMode="singleTask" />
-45-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:34:13-44
-46        <activity android:name="cs.hku.wallpaper_sdk.HomepageActivity" >
-46-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:36:9-41:20
-46-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:36:19-51
-47            <intent-filter>
-47-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:37:13-40:29
-48                <action android:name="android.intent.action.MAIN" />
-48-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:38:17-69
-48-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:38:25-66
-49
-50                <category android:name="android.intent.category.LAUNCHER" />
-50-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:39:17-77
-50-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:39:27-74
-51            </intent-filter>
+41-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:30:9-35:20
+41-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:30:19-40
+42            <intent-filter>
+42-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:31:13-34:29
+43                <action android:name="android.intent.action.MAIN" />
+43-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:32:17-69
+43-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:32:25-66
+44
+45                <category android:name="android.intent.category.LAUNCHER" />
+45-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:33:17-77
+45-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:33:27-74
+46            </intent-filter>
+47        </activity>
+48        <activity
+48-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:37:9-39:56
+49            android:name="cs.hku.wallpaper_sdk.RegisterActivity"
+49-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:38:13-45
+50            android:launchMode="singleTask" />
+50-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:39:13-44
+51        <activity android:name="cs.hku.wallpaper_sdk.HomepageActivity" >
+51-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:41:9-42:20
+51-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:41:19-51
 52        </activity>
 53        <activity android:name="cs.hku.wallpaper_sdk.Detail" />
-53-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:43:9-53
-53-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:43:19-41
+53-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:44:9-53
+53-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:44:19-41
 54        <activity android:name="cs.hku.wallpaper_sdk.stl_opengl.home.TLSModelActivity" >
-54-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:46:9-47:20
-54-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:46:19-67
+54-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:47:9-48:20
+54-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:47:19-67
 55        </activity>
 56
 57        <service
-57-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:49:9-59:19
+57-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:50:9-60:19
 58            android:name="cs.hku.wallpaper_sdk.stl_opengl.GLWallpaperService"
-58-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:50:13-58
+58-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:51:13-58
 59            android:label="@string/app_name"
-59-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:51:13-45
+59-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:52:13-45
 60            android:permission="android.permission.BIND_WALLPAPER" >
-60-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:52:13-67
+60-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:53:13-67
 61            <intent-filter>
-61-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:53:13-55:29
+61-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:54:13-56:29
 62                <action android:name="android.service.wallpaper.WallpaperService" />
-62-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:54:17-84
-62-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:54:25-82
+62-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:55:17-84
+62-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:55:25-82
 63            </intent-filter>
 64
 65            <meta-data
-65-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:56:13-58:53
+65-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:57:13-59:53
 66                android:name="android.service.wallpaper"
-66-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:57:17-57
+66-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:58:17-57
 67                android:resource="@xml/wallpaper" />
-67-->E:\Files\Project\test\wallpaper_sdk-master\app\src\main\AndroidManifest.xml:58:17-50
+67-->/Users/bytedance/AndroidStudioProjects/wallpaper_sdk/app/src/main/AndroidManifest.xml:59:17-50
 68        </service>
 69    </application>
 70

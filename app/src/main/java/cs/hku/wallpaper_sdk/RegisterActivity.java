@@ -73,7 +73,7 @@ public class RegisterActivity extends Activity {
                                 editor.putInt("wallpaper_uid", uid);
                                 editor.apply();
                                 editor.commit();
-                                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                                Intent intent = new Intent(RegisterActivity.this, HomepageActivity.class);
                                 startActivity(intent);
                             }
 

@@ -40,16 +40,16 @@
         android:usesCleartextTraffic="true" >
         <activity android:name="cs.hku.wallpaper_sdk.MainActivity" />
         <activity android:name="cs.hku.wallpaper_sdk.Login" >
-        </activity>
-        <activity
-            android:name="cs.hku.wallpaper_sdk.RegisterActivity"
-            android:launchMode="singleTask" />
-        <activity android:name="cs.hku.wallpaper_sdk.HomepageActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="cs.hku.wallpaper_sdk.RegisterActivity"
+            android:launchMode="singleTask" />
+        <activity android:name="cs.hku.wallpaper_sdk.HomepageActivity" >
         </activity>
         <activity android:name="cs.hku.wallpaper_sdk.Detail" />
         <activity android:name="cs.hku.wallpaper_sdk.stl_opengl.home.TLSModelActivity" >
